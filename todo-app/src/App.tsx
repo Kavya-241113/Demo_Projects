@@ -53,7 +53,7 @@ function App() {
     const taskToEdit = tasks.find((task) => task.id === id);
     if (taskToEdit) {
       setEditTaskText(taskToEdit.text);
-      setEditingTaskId(null);
+      setEditingTaskId(id);
     }
   };
 
@@ -81,7 +81,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>ToDo List</h1>
+      <h1>To-Do List</h1>
 
       <div className="input-group">
         <input
